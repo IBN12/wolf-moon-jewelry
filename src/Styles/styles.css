@@ -1,0 +1,469 @@
+/* body - Body for the entire application. */
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* * - All the elements in the application. */
+*{
+    box-sizing: border-box;
+}
+
+/*|Fonts|*/
+/* font-0 - Renuella */ 
+@font-face {
+    font-family: renuella;
+    src: url("../Fonts/Renuella/Renuella\ Personal\ Use\ Only.otf");
+}
+
+/* font-1 - Display Magazine*/ 
+@font-face {
+    font-family: display-magazine;
+    src: url("../Fonts/Display-Magazine/Display\ Magazine.otf"); 
+}
+
+/* font-2 - Rockinline */
+@font-face {
+    font-family: rockinline;
+    src: url("../Fonts/Rockinline/Rockinline.ttf");
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |Main Content| */
+/* Main Content - The applicatons main content. */
+#content{
+    /* border: 1px solid red;  */
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |Header Region| */
+.header-region{
+    font-family: renuella, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: linear-gradient(to right, #000000, #434343);
+    text-align: center; 
+    /* border: 1px solid blue; */
+    color: white; 
+    padding: 15px; 
+    font-size: 25px; 
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |Nav Region| */
+.nav-region{
+    display: flex;
+    justify-content: center; 
+    gap: 200px;
+
+    /* border: 1px solid #09090b; */
+    background: linear-gradient(to right, #000000, #434343);
+    padding: 15px;
+    color: white;
+}
+.nav-region > a{ /* All links in the nav region. */
+    /* border: 1px solid black; */
+    cursor: pointer;
+    font-family: renuella, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 15px;
+}
+.nav-region > a:hover{
+    color: #fdba74;
+}
+.nav-region > a:nth-child(1) > nav{ /* Products Dropdown Menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    /* z-index: -1; */
+    left: 0; 
+    top: -150px;
+    /* border: 1px solid black; */
+    /* background-color: purple;  */
+    background: linear-gradient(to right, #000000, #434343);
+    padding: 5px;
+    min-width: 100%; 
+    min-height: 150px;
+    color: white; 
+}
+.open-dropdown{
+    animation-name: openDropdown;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes openDropdown{
+    from{
+        transform: translate(0);
+    }
+    to {
+        transform: translate(0, 238px);
+    }
+}
+.close-dropdown{
+    animation-name: closeDropdown;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes closeDropdown{
+    from{
+        transform: translate(0, 238px);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |Main Region| */
+.main-region{
+    /* border: 1px solid lightcoral; */
+    /* padding: top right bottom left */
+    padding: 85px 400px 0 400px;
+    height: 70vh;
+}
+
+.homepage-module{ /* Homepage module */
+    /* border: 1px solid red; */
+    padding: 100px;
+    text-align: center; 
+}
+.homepage-module > header{ /* Homepage Header */
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    font-family: display-magazine, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px;
+    /* box-shadow: horizontal vertical blur spread */
+    box-shadow: 10px 10px 20px -1px;
+}
+.homepage-module > header > p{ /* Homepage Header Paragraph One*/
+    font-size: 15px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    color:#f97316;
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |Footer Region| */
+.footer-region{
+    /* border: 1px solid green;  */
+    position: relative; 
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+    padding: 30px;
+}
+
+.footer-region > section:nth-child(1){ /* Footer Region Section One */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 50px;
+
+    /* border: 1px solid orange; */
+    font-size: 15px; 
+}
+.footer-region > section:nth-child(1) > h4{ /* Footer Title */
+    font-family: display-magazine, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.footer-region > section:nth-child(1) > a{ /* Footer About Us|Contact Us */
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer; 
+}
+.footer-region > section:nth-child(1) > a:hover{
+    text-decoration: underline; 
+    color: #fdba74;
+}
+
+.footer-region > section:nth-child(2){ /* Footer Region Section Two */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* border: 1px solid green; */
+    line-height: 0;
+    font-size: 15px;
+}
+.footer-region > section:nth-child(2) > h4{ /* Socials Title */
+    font-family: display-magazine, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: 3px;
+}
+.footer-region > section:nth-child(2) > div{ /* Social Icons Container */
+    display: flex;
+    gap: 10px;
+
+    /* border: 1px solid orange; */
+}
+.footer-region > section:nth-child(2) > div > img[src]{ /* Icons */
+    width: 50px;
+    cursor: pointer; 
+}
+
+.footer-region > section:nth-child(3){ /* Footer Region Section Three */ 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+
+    /* border: 1px solid purple;  */
+    padding: 10px;
+}
+.footer-region > section:nth-child(3) > p{ /* Description|CopyRight|PoweredBy */ 
+    line-height: 0;
+    font-size: 15px;
+}
+.footer-region > section:nth-child(3) > p:nth-child(1){ /* Description */
+    line-height: 1;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.footer-region > section:nth-child(3) > p:nth-child(2){ /* Copyright */
+    font-family: 'Times New Roman', Times, serif; 
+}
+.footer-region > section:nth-child(3) > p:nth-child(3){ /* PoweredBy */
+    font-family: 'Times New Roman', Times, serif; 
+}
+.footer-region > section:nth-child(3) > p:nth-child(3) > span{ /* Powered By SoSu Plus */
+    font-family: rockinline, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #fdba74;
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |MISC Tools| */
+.hide-sections{
+    display: none;
+}
+.z-index{
+    z-index: -1;
+}
+.no-clicks{
+    pointer-events: none;
+}
+
+/**************************************************************************************************************************************************************************/
+/**************************************************************************************************************************************************************************/
+/* |Mobile and Desktop Miniaturization| */
+
+/* Mobile-0 - For standard mobile devices and tablets. */
+@media only screen and (max-width: 850px){
+    /* |Main Content| */
+    #content{
+        /* border: 1px solid purple; */
+        /* padding: 3px;  */
+    }
+
+    /* |Mobile Nav Region| */
+    .mobile-nav-region{
+        display: flex;
+        align-items: center; 
+
+        /* border: 1px solid black;  */
+        background: linear-gradient(to right, #000000, #434343);
+    }
+    .mobile-nav-region > a{ /* Mobile Title Link */
+        flex: 1;
+
+        /* border: 1px solid blue; */
+        color: white; 
+        font-family: renuella, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 12px;
+    }
+    .mobile-nav-region > img[src]{ /* Mobile Menu Image */
+        width: 50px;
+        cursor: pointer; 
+    }
+    .rotate-menu-image-anim{
+        animation-name: rotateMenuImageAnim;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;   
+    }
+    @keyframes rotateMenuImageAnim{
+        from{
+            transform: rotate(0);
+        }
+        to{
+            transform: rotate(90deg); 
+        }
+    }
+    .original-menu-image-anim{
+        animation-name: originalMenuImageAnim;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes originalMenuImageAnim{
+        from{
+            transform: rotate(90deg);
+        }
+        to{
+            transform: rotate(0); 
+        }
+    }
+    .mobile-nav-menu{ /* Mobile Nav Menu */
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        background: linear-gradient(to right, #000000bd, #434343);
+        width: 100%;
+        height: 100vh; /* Made need to change. */
+    }
+    .open-mobile-nav-menu{
+        animation-name: openMobileNavMenu;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes openMobileNavMenu{
+        from{
+            transform: translateX(-800px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+    .close-mobile-nav-menu{
+        animation-name: closeMobileNavMenu;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes closeMobileNavMenu{
+        from{
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(-800px); 
+        }
+    }
+    .mobile-nav-menu > section:nth-child(1){ /* Mobile Nav Menu Section One */
+        display: flex;
+        justify-content: end; 
+
+        /* border: 1px solid orange;  */
+    }
+    .mobile-nav-menu > section:nth-child(1) > img[src]{ /* Mobile Nav Menu Close Button */
+        height: 60px; 
+    }
+
+    /* |Mobile Main Region| */ 
+    .mobile-main-region{
+        /* border: 1px solid green; */
+        height: 70vh;
+        padding: 65px 10px 0 10px;
+    }
+    .mobile-homepage-module{ /* Mobile Homepage Module */ 
+        /* border: 1px solid blue; */
+        padding: 5px;
+        text-align: center;   
+    }
+    .mobile-homepage-module > header{ /* Mobile Homepage Header */
+        /* border: 1px solid black; */
+        border-radius: 10px; 
+        box-shadow: 10px 10px 20px -1px;
+        padding: 5px;
+        font-family: display-magazine, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .mobile-homepage-module > header > p{
+        color:#f97316;
+        font-size: 14px;
+        word-spacing: 7px;
+    }
+
+    /* |Footer Region| */
+    .mobile-footer-region{
+        /* border: 1px solid orange; */
+        position: fixed; 
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to right, #000000, #434343);
+        color: white; 
+        padding: 30px;
+    }
+
+    .mobile-footer-region > section:nth-child(1){ /* Mobile Footer Section One*/
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        gap: 20px; 
+
+        /* border: 1px solid purple;  */
+        font-size: 15px;
+    }
+    .mobile-footer-region > section:nth-child(1) > h4{ /* Mobile Footer Title */
+        font-family: display-magazine, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    .mobile-footer-region > section:nth-child(1) > a{ /* Mobile Footer Links */
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .mobile-footer-region > section:nth-child(2){ /* Mobile Footer Section Two */
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+
+        /* border: 1px solid green; */
+        font-size: 15px; 
+        line-height: 0;
+    }
+    .mobile-footer-region > section:nth-child(2) > h4{ /* Mobile Footer Socials Title */
+        /* border: 1px solid black; */
+        font-family: display-magazine, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        letter-spacing: 3px;
+    }
+    .mobile-footer-region > section:nth-child(2) > section{ /* Mobile Footer Social Icons Container */
+        display: flex;
+        gap: 10px;
+
+        /* border: 1px solid black; */
+    }
+    .mobile-footer-region > section:nth-child(2) > section > img[src]{ /* Social Icons */
+        width: 40px;
+    }
+
+    .mobile-footer-region > section:nth-child(3){ /* Mobile Footer Section Three */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* border: 1px solid orange;  */
+        line-height: 0;
+        font-size: 13px; 
+    }
+    .mobile-footer-region > section:nth-child(3) > p:nth-child(1){ /* Description */
+        line-height: 1;
+        text-align: center; 
+    }
+    .mobile-footer-region > section:nth-child(3) > p:nth-child(2){ /* CopyRight */
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .mobile-footer-region > section:nth-child(3) > p:nth-child(3){ /* Powered By */
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .mobile-footer-region > section:nth-child(3) > p:nth-child(3) > span{ /* Sosu Plus */
+        color:#fdba74;
+        font-family: rockinline, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+}
+
+/* Media-1 - Will adjust the viewport for the main region when miniaturization is initiated. */
+@media only screen and (max-width: 1500px){
+    /* Main Page */
+    .main-region{
+        /* Temporary settings for minitaturization */
+        padding: 85px 60px 0 60px; 
+    }
+}

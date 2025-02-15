@@ -1,0 +1,21 @@
+{
+  "name": "wolf-moon-jewelry",
+  "version": "1.0.0",
+  "description": "Client Project: Wolf Moon Jewelry",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
